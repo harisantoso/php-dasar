@@ -1,0 +1,2 @@
+mysqli_fetch_assoc = Menampilkan Data
+mysqli_connect = Membuat Koneksi Database
