@@ -136,10 +136,6 @@ $ git branch
 * main
 
 unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
-$ git checkout reatures
-error: pathspec 'reatures' did not match any file(s) known to git
-
-unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
 $ git checkout features
 Switched to branch 'features'
 M       CATATAN.txt
@@ -169,6 +165,63 @@ Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         modified:   CATATAN.txt
         new file:   script.js
+
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (features)
+$ git commit -am 'mengubah catatan dan menambahkan file script.js'
+[features 14984e4] mengubah catatan dan menambahkan file script.js
+ 2 files changed, 120 insertions(+), 1 deletion(-)
+ create mode 100644 script.js
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (features)
+$ git status
+On branch features
+nothing to commit, working tree clean
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (features)
+$ graph
+* 14984e4 (HEAD -> features) mengubah catatan dan menambahkan file script.js
+* b4b0b73 (origin/main, origin/HEAD, harisantoso/main, main) menambahkan file css
+*   9422b84 Merge pull request #1 from santosowork/main
+|\
+| * ce01256 update catatan.txt
+| * c354456 edit dari santosowork
+|/
+* ed177d3 keterangan multiple remote
+* 22f8eae Git Multiple Remote
+* fe4fedd full php dasar
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (features)
+$ git push origin features
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 1.67 KiB | 854.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'features' on GitHub by visiting:
+remote:      https://github.com/santosowork/php-dasar/pull/new/features
+remote:
+To https://github.com/santosowork/php-dasar.git
+ * [new branch]      features -> features
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (features)
+$ graph
+* 14984e4 (HEAD -> features, origin/features) mengubah catatan dan menambahkan file script.js
+* b4b0b73 (origin/main, origin/HEAD, harisantoso/main, main) menambahkan file css
+*   9422b84 Merge pull request #1 from santosowork/main
+|\
+| * ce01256 update catatan.txt
+| * c354456 edit dari santosowork
+|/
+* ed177d3 keterangan multiple remote
+* 22f8eae Git Multiple Remote
+* fe4fedd full php dasar
+
+- lalu pull request pada github untuk meminta fiture baru pada branch github web santosowork
+dengan memilih branch features telebih dahulu.
 
 
 
