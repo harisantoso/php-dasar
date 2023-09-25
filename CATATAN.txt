@@ -47,10 +47,128 @@ $ graph
 
 
 
+2. singkronkan git dengan git sumber asal repo 
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ graph
+* ce01256 (HEAD -> main, origin/main, origin/HEAD) update catatan.txt
+* c354456 edit dari santosowork
+* ed177d3 (harisantoso/main) keterangan multiple remote
+* 22f8eae Git Multiple Remote
+* fe4fedd full php dasar
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git fetch harisantoso
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 4 (delta 1), reused 3 (delta 1), pack-reused 0
+Unpacking objects: 100% (4/4), 907 bytes | 75.00 KiB/s, done.
+From https://github.com/harisantoso/php-dasar
+   ed177d3..b4b0b73  main       -> harisantoso/main
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ graph
+* b4b0b73 (harisantoso/main) menambahkan file css
+*   9422b84 Merge pull request #1 from santosowork/main
+|\
+| * ce01256 (HEAD -> main, origin/main, origin/HEAD) update catatan.txt
+| * c354456 edit dari santosowork
+|/
+* ed177d3 keterangan multiple remote
+* 22f8eae Git Multiple Remote
+* fe4fedd full php dasar
 
 
+3. singkronkan github local dengan github harisantoso jika git harisantoso ada perubahan
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git merge harisantoso/main
+Updating ce01256..b4b0b73
+Fast-forward
+ style.css | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 style.css
 
-2.
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ graph
+* b4b0b73 (HEAD -> main, harisantoso/main) menambahkan file css
+*   9422b84 Merge pull request #1 from santosowork/main
+|\
+| * ce01256 (origin/main, origin/HEAD) update catatan.txt
+| * c354456 edit dari santosowork
+|/
+* ed177d3 keterangan multiple remote
+* 22f8eae Git Multiple Remote
+* fe4fedd full php dasar
+
+# singkronkan git local, github web dan github repositori harisantoso
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git push
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 2 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 927 bytes | 927.00 KiB/s, done.
+Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/santosowork/php-dasar.git
+   ce01256..b4b0b73  main -> main
+
+
+#Remote Branch
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   CATATAN.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git branch features
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git branch
+  features
+* main
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git checkout reatures
+error: pathspec 'reatures' did not match any file(s) known to git
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git checkout features
+Switched to branch 'features'
+M       CATATAN.txt
+
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (features)
+$ git status
+On branch features
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   CATATAN.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        script.js
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (features)
+$ git add .
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (features)
+$ git status
+On branch features
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   CATATAN.txt
+        new file:   script.js
 
 
 
