@@ -2,5 +2,65 @@ mysqli_fetch_assoc = Menampilkan Data
 mysqli_connect = Membuat Koneksi Database
 
 #Git Multiple Remote
-1.
+1. fork
+- clone repo
+  $ git clone https://github.com/santosowork/php-dasar.git
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ alias graph='git log --all --oneline --decorate --graph'
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ graph
+* ed177d3 (HEAD -> main, origin/main, origin/HEAD) keterangan multiple remote
+* 22f8eae Git Multiple Remote
+* fe4fedd full php dasar
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git remote
+origin
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git remote -v
+origin  https://github.com/santosowork/php-dasar.git (fetch)
+origin  https://github.com/santosowork/php-dasar.git (push)
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git remote add harisantoso https://github.com/harisantoso/php-dasar.git
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git remote -v
+harisantoso     https://github.com/harisantoso/php-dasar.git (fetch)
+harisantoso     https://github.com/harisantoso/php-dasar.git (push)
+origin  https://github.com/santosowork/php-dasar.git (fetch)
+origin  https://github.com/santosowork/php-dasar.git (push)
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ git fetch harisantoso
+From https://github.com/harisantoso/php-dasar
+ * [new branch]      main       -> harisantoso/main
+
+unxwibs@unxwibs-PC MINGW64 ~/Desktop/php-dasar (main)
+$ graph
+* ed177d3 (HEAD -> main, origin/main, origin/HEAD, harisantoso/main) keterangan multiple remote
+* 22f8eae Git Multiple Remote
+* fe4fedd full php dasar
+
+
+
+
+
+
 2.
+
+
+
+
+
+
+
+
+
+
+
+ssh:
+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A
